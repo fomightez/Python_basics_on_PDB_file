@@ -1,0 +1,44 @@
+#!/bin/bash
+set -eux
+
+env | sort
+pwd
+
+# jupyter-offlinenotebook is automatically installed by repo2docker.
+# Uninstall to avoid conflicts
+jupyter labextension uninstall --no-build jupyter-offlinenotebook
+
+# Upgrade jupyterlab if necessary
+conda install jupyterlab=2
+
+# install necessaary kernel and debugger related dependency following 
+# https://github.com/jupyterlab/debugger#installation , doing it in
+# postBuild and not `environment.yml` to avoid breaking jupyter-offlinenotebook
+conda install -c conda-forge xeus-python=0.6.12 ptvsd
+# install the debugger in postBuild and not `environment.yml` to 
+# avoid breaking jupyter-offlinenotebook
+jupyter labextension install @jupyterlab/debugger
+
+# repo2docker copies this repo into $HOME which means jupyter labextension
+# picks up hidden dot files and runs into problems so install from a
+# different directory
+SRCDIR=/srv/conda/src/jupyter-offlinenotebook
+mkdir -p "$SRCDIR"
+cp -a * "$SRCDIR"
+cd "$SRCDIR"
+python -m pip install .
+jupyter labextension link --debug
+
+
+# clean up a bit since may be using the starting directory to work
+cd ~
+rm tsconfig.json
+rm setup.py
+rm setup.cfg
+rm README.md
+rm dev-requirements.txt
+rm -rf jupyter_offlinenotebook
+rm -rf tests
+rm LICENSE
+rm MANIFEST.in
+rm package.json
