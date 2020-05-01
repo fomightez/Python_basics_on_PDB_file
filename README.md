@@ -1,4 +1,4 @@
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/fomightez/BVCN-Jupyter_base/master?urlpath=lab%2Ftree%2FUntitled.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/fomightez/BVCN-Jupyter_base/master?urlpath=lab%2Ftree%2Findex.ipynb)
 
 # Python_basics_on_PDB_file
 Python basics exploring a PDB file for session #3 of [Upstate Medical University's **GS647-021 Nanocourse: Structuring against Coronavirus**](https://github.com/fomightez/UpstateGS647-021Nanocourse/wiki)
@@ -17,4 +17,4 @@ Based on [this repo](https://github.com/fomightez/BVCN-Jupyter_base) combining [
 
 -----
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/fomightez/BVCN-Jupyter_base/master?urlpath=lab%2Ftree%2FUntitled.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/fomightez/BVCN-Jupyter_base/master?urlpath=lab%2Ftree%2Findex.ipynb)
