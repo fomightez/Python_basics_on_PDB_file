@@ -42,3 +42,4 @@ rm -rf tests
 rm LICENSE
 rm MANIFEST.in
 rm package.json
+rm debugger_demo.ipynb
