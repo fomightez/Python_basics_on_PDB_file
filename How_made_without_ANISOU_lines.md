@@ -8,11 +8,12 @@ Opened `3hyd.pdb` (created from content at [PDB entry for 3hyd](https://files.rc
 BASED on: https://superuser.com/questions/1081156/how-to-remove-lines-starting-with-specific-character and https://stackoverflow.com/a/5185998/8508004 and the fact I don't want to deal with anisotropic temperature factors as they not typically in PDB files.
 
 
-FIND:
+FIND:  
 ^ANISOU.*\n
 
 
-REPLACE: NOTHING
+REPLACE:  
+NOTHING
 
 
 
