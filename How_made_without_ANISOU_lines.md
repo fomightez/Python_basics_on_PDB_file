@@ -13,9 +13,9 @@ FIND:
 
 
 REPLACE:  
-NOTHING
+<NOTHING>
 
 
 
 
-The `\n` at the end insures it also removes the blank line that would otherwise be left behind. See https://stackoverflow.com/a/5185998/8508004 
+The `\n` at the end of the find pattern insures it also removes the blank line that would otherwise be left behind. See https://stackoverflow.com/a/5185998/8508004 
